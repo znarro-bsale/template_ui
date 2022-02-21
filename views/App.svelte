@@ -1,8 +1,19 @@
 <script>
+	import { onMount } from "svelte";
+	import ApiCall from "../helpers/api_call"
 	import EjemploTextField from './components/EjemploTextField.svelte';
 	import EjemploButton from './components/EjemploButton.svelte';
 
 	export let name;
+
+	const getData = async () => {
+		const data = await ApiCall.request('/gateway/examples')
+		console.log('DATA', data)
+	}
+
+	onMount(() => {
+		getData()
+	})
 </script>
 
 <main>

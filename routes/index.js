@@ -9,7 +9,7 @@ const ApiCall = require('../helpers/api_call');
 
 /* GET página principal en este ejemplo se despliega un formularios */
 router.get('/', function(req, res, next) {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'))
+  res.sendFile(path.join(process.cwd(), 'views', 'layouts', 'index.html'))
 });
 
 /**Página de despliegue de listas */
