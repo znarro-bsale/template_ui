@@ -1,8 +1,7 @@
 <script>
 	import { onMount } from "svelte";
 	import ApiCall from "../helpers/api_call"
-	import EjemploTextField from './components/EjemploTextField.svelte';
-	import EjemploButton from './components/EjemploButton.svelte';
+	import Smui from './components/Smui.svelte';
 
 	export let name;
 
@@ -21,9 +20,7 @@
 	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
 
 	<form action="">
-		<EjemploTextField field="username" label="username" />
-		<EjemploTextField field="address" label="address" required={true} />
-		<EjemploButton on:click={() => console.log('Enviar!')}>Enviar</EjemploButton>
+		<Smui />
 	</form>
 </main>
 
